@@ -45,5 +45,5 @@ public class SumOfLinkedLists {
         if(root == null) root = new LinkedList(0);
         return root;
     }
-    
+
 }
