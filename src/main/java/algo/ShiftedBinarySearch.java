@@ -40,7 +40,7 @@ public class ShiftedBinarySearch {
     }
 
     public static void main(String args[]) {
-        t2();
+        t3();
     }
     private static void t1(){
         System.out.println(shiftedBinarySearch(new int[]{45, 61, 71, 72, 73, 0, 1, 21, 33, 37},33));
@@ -48,5 +48,9 @@ public class ShiftedBinarySearch {
 
     private static void t2(){
         System.out.println(shiftedBinarySearch(new int[]{5, 23, 111, 1},111));
+    }
+
+    private static void t3(){
+        System.out.println(shiftedBinarySearch(new int[]{111,1,5,23},5));
     }
 }
