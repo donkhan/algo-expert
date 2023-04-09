@@ -7,6 +7,9 @@ public class Permutation {
 
     private static List<List<Integer>> p(List<Integer> in){
         List<List<Integer>> out = new ArrayList<>();
+        if(in.size() == 0){
+            return out;
+        }
         if(in.size() == 1) {
             List<Integer> l = new ArrayList<>();
             l.add(in.get(0));
@@ -17,7 +20,8 @@ public class Permutation {
         int factorial = factorial(in.size());
         int rows = factorial/in.size();
         for(int k = 0;k<in.size();k++) {
-            for (int i = 0; i < rows; i++) {
+            int i = 0;
+            while (i < rows) {
                 List<Integer> newIn = new ArrayList();
                 newIn.addAll(in.subList(0, k));
                 newIn.addAll(in.subList(k + 1, in.size()));
@@ -47,7 +51,7 @@ public class Permutation {
     public static void main(String args[]){
         List<Integer> list = new ArrayList<>();
 
-        list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+        list.add(1);list.add(2);list.add(3);//list.add(4);list.add(5);list.add(6);
         List<List<Integer>> x = p(list);
         for(List<Integer> y : x)
             System.out.println(y);
