@@ -10,5 +10,8 @@ public class NthFib {
     public static void main(String args[]){
         int n = new NthFib().fib(6);
         System.out.println(n);
+
+        System.out.println((-97 % 10));
+        
     }
 }
